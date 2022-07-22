@@ -2,4 +2,4 @@
 .pytest_cache/
 *.log
 *__pycache__/
-pages/__pycache__/
+*.pyc
