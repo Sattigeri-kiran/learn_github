@@ -5,11 +5,10 @@ from pages.gshomepage import TestGSHomePage
 
 @pytest.mark.usefixtures("GSSetup")
 class TestReviewPage:
-    def class_setup(self):
-        self.o_page = TestGSHomePage(self.driver, self.wait)
 
     def test_reviewpage(self):
-        review_page = self.o_page.test_review_page()
+        home_page = TestGSHomePage(self.driver, self.wait)
+        review_page = home_page.test_review_page()
         review_page.test_sort(2, "wc-block-components-sort-select__select-0")
         time.sleep(5)
         # review_page.backtotop()
