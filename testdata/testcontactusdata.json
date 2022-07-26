@@ -1,0 +1,18 @@
+{
+  "testdata1": {
+    "emailId" : "test",
+    "message" : "Please include an '@' in the email address. 'test' is missing an '@'."
+  },
+  "testdata2": {
+    "emailId" : "test@",
+    "message" : "Please enter a part following '@'. 'test@' is incomplete."
+  },
+  "testdata3": {
+    "emailId": "test@.com",
+    "message": "'.' is used at a wrong position in '.com'."
+  },
+  "testdata4": {
+    "emailId": "test@gmail.com",
+    "message" : ""
+  }
+}

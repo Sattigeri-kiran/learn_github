@@ -1,0 +1,15 @@
+{
+  "Karadant": {
+    "item_Xpath": "//a[@href='https://gokaksweets.com/product/kardant/'][normalize-space()='Shop now']",
+    "AddtoBasketXpath": "//button[normalize-space()='Add to basket']",
+    "weight": "//li[@title='1kg']",
+    "half_kg_weight" :"//li[@title='500gm']"
+  },
+  "Ladagi Laddu": {
+    "item_Xpath": "//a[@href='https://gokaksweets.com/product/ladagi-laddu/'][normalize-space()='Shop now']",
+    "AddtoBasketXpath": "//button[normalize-space()='Add to basket']",
+    "weight": "//li[@title='1kg']",
+    "half_kg_weight" :"//li[@title='500gm']"
+
+  }
+}

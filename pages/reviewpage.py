@@ -1,7 +1,6 @@
 import time
 import logging
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver import ActionChains
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException

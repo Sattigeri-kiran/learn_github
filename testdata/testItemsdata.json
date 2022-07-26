@@ -1,0 +1,15 @@
+{
+  "Karadant": {
+    "item_Xpath": "//a[@href='https://gokaksweets.com/product/kardant/'][normalize-space()='Shop now']",
+    "item_price_halfkg": "339.00",
+    "item_price_1kg" : "599.00",
+    "item": "Karadant"
+  },
+  "Ladagi Laddu": {
+    "item_Xpath": "//a[@href='https://gokaksweets.com/product/ladagi-laddu/'][normalize-space()='Shop now']",
+    "item_price_halfkg": "229.00",
+    "item_price_1kg" : "349.00",
+    "item": "Ladagi Laddu"
+  }
+}
+
