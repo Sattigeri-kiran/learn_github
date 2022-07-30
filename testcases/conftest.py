@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from ftplib import FTP
 
 
 @pytest.fixture(scope="class")
@@ -22,6 +23,15 @@ def GSSetup(request, browser, url):
     request.cls.wait = wait
     yield
     driver.quit()
+
+@pytest.fixture(scope="class")
+def FTPsetup(request):
+    ftp = FTP("ftp.dlptest.com")
+    ftp.login("dlpuser", 'rNrKYTX9g7z3RgJRmxWuGHbeu')
+    print(ftp.getwelcome())
+    request.cls.ftp = ftp
+    yield
+    ftp.close()
 
 
 def pytest_addoption(parser):
