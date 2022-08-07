@@ -1,14 +1,9 @@
 import logging
 import inspect
-from os import path
-from zipfile import ZipFile
 from openpyexcel import Workbook, load_workbook
 
 
 class Utils:
-
-    def __init__(self, ftp):
-        self.ftp = ftp
 
     def currencyConversion(self, list1):
         Convertedlist = []
@@ -49,17 +44,4 @@ class Utils:
             data_list.append(row)
         return data_list
 
-    def uploadfiles_to_ftp(self, file_name):
-        with open("./testdata/" + file_name, "rb") as my_file:
-            self.ftp.storbinary(f"STOR {file_name}", my_file)
-        return self.ftp.nlst()
 
-    def downloadfiles_from_ftp(self, file_name):
-        with open("./output/" + file_name, "wb") as file:
-            self.ftp.retrbinary(f"RETR {file_name}", file.write)
-        return ["./output/" + file_name, path.exists("./output/" + file_name)]
-
-    def read_downloaded_zipfile(self, file_name, file_location):
-        with ZipFile(file_location) as my_zip_file:
-            output = my_zip_file.read(file_name)
-            return str(output)
