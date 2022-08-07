@@ -20,7 +20,7 @@ class TestBaseline(unittest.TestCase):
         print(rebaseline_response)
         assert  rebaseline_response[0].endswith("deleteCitation.xml") == True, "Rebaseline output is not created Check"
         res = self.zp.create_zipfile(rebaseline_response[0])
-        assert res == True , "Zip file is not created Check"
+        assert res == True , "Zip file is not created Checkit"
         check = self.zp.delete_downloaded_zipfile("./temp")
         assert len(check) == 0, "Temp file is not removed from temp location"
 
