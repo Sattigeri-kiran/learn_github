@@ -7,7 +7,6 @@ class TestWeather:
         BaseUrl = "https://api.openweathermap.org/data/2.5/weather?"
         API = BaseUrl + "lat={lat}&lon={lon}&appid={appid}"
         url = API.format(lat="16.159185", lon="74.815620", appid="2f61c228521356a682a4e96e5f2429e6")
-        print(url)
         re = requests.get(url)
         response = re.json()
         assert response['name'] == 'Gokak', "Expected to be Gokak but got " + response['name']
